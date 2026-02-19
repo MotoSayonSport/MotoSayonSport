@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Sayon Sport</title>
+    <link rel="stylesheet" href="css/Dec.css">
+    <!-- Fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">MOTO SAYON SPORT</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#modelos">Modelos</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-socials">
+            <a href="https://www.facebook.com/profile.php?id=100057323955178" class="btn-social" title="Facebook">
+                <img src="Img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://wa.me/75819459" class="btn-social" title="WhatsApp">
+                <img src="Img/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> &#9776;
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Portada) -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Siente la Libertad</h1>
+            <p class="fade-in delay-1">Descubre la potencia y el diseño de nuestra nueva colección 2026.</p>
+            <a href="#modelos" class="btn fade-in delay-2">Ver Modelos</a>
+        </div>
+    </header>
+
+    <!-- Sección de Modelos -->
+    <section id="modelos" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Modelos</h2>
+            <div class="models-grid">
+                <!-- Fila 1 -->
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/holkan.jpeg');"></div>
+                    <h3>Holkan</h3>
+                    <p>Caracteristicas.
+                        " ruedas
+                        1 capo"
+                    </p>
+                    <button class="btn-secondary">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/CT\ 125.jpeg');"></div>
+                    <h3>Ct 125</h3>
+                    <p>La compañera perfecta para la ciudad.</p>
+                    <button class="btn-secondary">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/pulsar\ NS200\ ug.jpeg');"></div>
+                    <h3>Pulsar NS200</h3>
+                    <p>Para caminos donde termina el asfalto.</p>
+                    <button class="btn-secondary">Detalles</button>
+                </div>
+                
+                <!-- Fila 2 (Nuevas) -->
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/dominar400.jpeg'); /* Asegúrate de tener esta imagen o cambia el nombre */"></div>
+                    <h3>Dominar 400</h3>
+                    <p>Potencia para el turismo deportivo.</p>
+                    <button class="btn-secondary">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/boxer150.jpeg'); /* Asegúrate de tener esta imagen o cambia el nombre */"></div>
+                    <h3>Boxer 150</h3>
+                    <p>Resistencia y trabajo duro.</p>
+                    <button class="btn-secondary">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/gn125.jpeg'); /* Asegúrate de tener esta imagen o cambia el nombre */"></div>
+                    <h3>GN 125</h3>
+                    <p>Clásica y confiable para todo uso.</p>
+                    <button class="btn-secondary">Detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo -->
+    <section id="catalogo" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title text-light">Catálogo</h2>
+            <p class="text-light">Descarga o visualiza nuestro catálogo completo con especificaciones y precios.</p>
+            <div class="catalog-grid">
+                <div class="catalog-item scroll-reveal">
+                    <h3>Catálogo General 2026</h3>
+                    <p>Ficha con todos los modelos y especificaciones.</p>
+                    <button class="btn-secondary catalog-open">Ver Catálogo</button>
+                </div>
+                <div class="catalog-item scroll-reveal">
+                    <h3>Accesorios</h3>
+                    <p>Complementos originales y repuestos.</p>
+                    <button class="btn-secondary catalog-open">Ver Accesorios</button>
+                </div>
+                <div class="catalog-item scroll-reveal">
+                    <h3>Promociones</h3>
+                    <p>Ofertas actuales y planes de financiamiento.</p>
+                    <button class="btn-secondary catalog-open">Ver Promociones</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Catálogos -->
+    <div id="catalogModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeCatalog" aria-label="Cerrar">&times;</button>
+            <h2>Catálogos de Marcas</h2>
+            <p>Selecciona una marca para ver su catálogo en línea (abre una búsqueda en internet).</p>
+            <div class="modal-catalog-grid">
+                <div class="catalog-card">
+                    <img src="Img/CT 125.jpeg" alt="Honda CT 125">
+                    <h4>Honda</h4>
+                    <a href="catalogs/honda.html" target="_blank" rel="noopener">Ver catálogo</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="Img/FXR200.jpeg" alt="Yamaha FXR200">
+                    <h4>Yamaha</h4>
+                    <a href="catalogs/yamaha.html" target="_blank" rel="noopener">Ver catálogo</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="Img/holkan.jpeg" alt="Suzuki / Holkan">
+                    <h4>Suzuki</h4>
+                    <a href="catalogs/suzuki.html" target="_blank" rel="noopener">Ver catálogo</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="Img/pulsar NS200 ug.jpeg" alt="Bajaj Pulsar NS200">
+                    <h4>Bajaj</h4>
+                    <a href="catalogs/bajaj.html" target="_blank" rel="noopener">Ver catálogo</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="Img/125 NFI.jpeg" alt="TVS 125">
+                    <h4>TVS</h4>
+                    <a href="catalogs/tvs.html" target="_blank" rel="noopener">Ver catálogo</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="Img/ns 400z.jpeg" alt="Royal Enfield / NS 400z">
+                    <h4>Royal Enfield</h4>
+                    <a href="catalogs/royal-enfield.html" target="_blank" rel="noopener">Ver catálogo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Moto Sayon Sport. Todos los derechos reservados.</p>
+        <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100057323955178&locale=es_LA"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
