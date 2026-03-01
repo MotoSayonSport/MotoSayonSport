@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moto Sayon Sport</title>
+    <link rel="icon" type="image/x-icon" href="img/casco.ico">
     <link rel="stylesheet" href="css/dec.css">
     <!-- Fuente moderna de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -23,10 +24,10 @@
         </ul>
         <div class="nav-socials">
             <a href="https://www.facebook.com/profile.php?id=100057323955178" class="btn-social" title="Facebook">
-                <img src="Img/facebook.png" alt="Facebook">
+                <img src="img/facebook.png" alt="Facebook">
             </a>
             <a href="https://wa.me/75819459" class="btn-social" title="WhatsApp">
-                <img src="Img/whatsapp.png" alt="WhatsApp">
+                <img src="img/whatsapp.png" alt="WhatsApp">
             </a>
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
@@ -46,49 +47,46 @@
     <!-- Sección de Modelos -->
     <section id="modelos" class="section">
         <div class="container">
-            <h2 class="section-title">Nuestros Modelos</h2>
+            <h2 class="section-title">Motos más vendidas</h2>
             <div class="models-grid">
                 <!-- Fila 1 -->
                 <div class="model-card scroll-reveal">
-                    <div class="model-image" style="background-image: url('img/holkan.jpeg');"></div>
-                    <h3>Holkan</h3>
-                    <p>Caracteristicas.
-                        " ruedas
-                        1 capo"
-                    </p>
-                    <button class="btn-secondary">Detalles</button>
+                    <div class="model-image" style="background-image: url('img/moto1.jpeg');"></div>
+                    <h3>Suzuki DR 150 (Holkan)</h3>
+                    <p>Aventura y resistencia en todo terreno.</p>
+                    <button class="btn-secondary moto-btn" data-name="Suzuki DR 150" data-img="img/moto1.jpeg" data-specs="Motor: 149 cc|Potencia: 12.2 HP|Frenos: Disco delantero|Estilo: Doble Propósito|Transmisión: 5 Velocidades">Detalles</button>
                 </div>
                 <div class="model-card scroll-reveal">
-                    <div class="model-image" style="background-image: url('img/CT\ 125.jpeg');"></div>
-                    <h3>Ct 125</h3>
-                    <p>La compañera perfecta para la ciudad.</p>
-                    <button class="btn-secondary">Detalles</button>
+                    <div class="model-image" style="background-image: url('img/moto2.jpeg');"></div>
+                    <h3>Honda CT 125</h3>
+                    <p>La utilitaria y aventurera versátil.</p>
+                    <button class="btn-secondary moto-btn" data-name="Honda CT 125" data-img="img/moto2.jpeg" data-specs="Motor: 124.9 cc|Potencia: 9.1 HP|Consumo: Muy económico|Estilo: Utilitaria / Moped|Transmisión: Semiautomática">Detalles</button>
                 </div>
                 <div class="model-card scroll-reveal">
-                    <div class="model-image" style="background-image: url('img/pulsar\ NS200\ ug.jpeg');"></div>
-                    <h3>Pulsar NS200</h3>
-                    <p>Para caminos donde termina el asfalto.</p>
-                    <button class="btn-secondary">Detalles</button>
+                    <div class="model-image" style="background-image: url('img/moto3.jpeg');"></div>
+                    <h3>Bajaj Pulsar NS200</h3>
+                    <p>Potencia naked para caminos asfálticos.</p>
+                    <button class="btn-secondary moto-btn" data-name="Bajaj Pulsar NS200" data-img="img/moto3.jpeg" data-specs="Motor: 199.5 cc Triple Bujía|Potencia: 24.5 HP|Frenos: Disco en ambas ruedas|Estilo: Naked Deportiva|Refrigeración: Líquida">Detalles</button>
                 </div>
                 
                 <!-- Fila 2 (Nuevas) -->
                 <div class="model-card scroll-reveal">
-                    <div class="model-image" style="background-image: url('img/dominar400.jpeg'); /* Asegúrate de tener esta imagen o cambia el nombre */"></div>
-                    <h3>Dominar 400</h3>
+                    <div class="model-image" style="background-image: url('img/moto7.jpeg');"></div>
+                    <h3>Bajaj Dominar 400</h3>
                     <p>Potencia para el turismo deportivo.</p>
-                    <button class="btn-secondary">Detalles</button>
+                    <button class="btn-secondary moto-btn" data-name="Bajaj Dominar 400" data-img="img/moto7.jpeg" data-specs="Motor: 373.3 cc DOHC|Potencia: 40 HP|Frenos: ABS doble canal|Estilo: Sports Tourer|Tecnología: Faros Full LED">Detalles</button>
                 </div>
                 <div class="model-card scroll-reveal">
-                    <div class="model-image" style="background-image: url('img/boxer150.jpeg'); /* Asegúrate de tener esta imagen o cambia el nombre */"></div>
-                    <h3>Boxer 150</h3>
+                    <div class="model-image" style="background-image: url('img/moto8.jpeg');"></div>
+                    <h3>Bajaj Boxer 150</h3>
                     <p>Resistencia y trabajo duro.</p>
-                    <button class="btn-secondary">Detalles</button>
+                    <button class="btn-secondary moto-btn" data-name="Bajaj Boxer 150" data-img="img/moto8.jpeg" data-specs="Motor: 144.8 cc|Potencia: 12.0 HP|Torque: 12.3 Nm|Estilo: Trabajo y Carga|Suspensión: Doble resorte (SNS)">Detalles</button>
                 </div>
                 <div class="model-card scroll-reveal">
-                    <div class="model-image" style="background-image: url('img/gn125.jpeg'); /* Asegúrate de tener esta imagen o cambia el nombre */"></div>
-                    <h3>GN 125</h3>
+                    <div class="model-image" style="background-image: url('img/moto9.jpeg');"></div>
+                    <h3>Suzuki GN 125</h3>
                     <p>Clásica y confiable para todo uso.</p>
-                    <button class="btn-secondary">Detalles</button>
+                    <button class="btn-secondary moto-btn" data-name="Suzuki GN 125" data-img="img/moto9.jpeg" data-specs="Motor: 124 cc 4 tiempos|Potencia: 12.5 HP|Estilo: Custom / Clásica|Llantas: Aleación|Arranque: Eléctrico">Detalles</button>
                 </div>
             </div>
         </div>
@@ -128,34 +126,50 @@
             <p>Selecciona una marca para ver su catálogo en línea (abre una búsqueda en internet).</p>
             <div class="modal-catalog-grid">
                 <div class="catalog-card">
-                    <img src="Img/CT 125.jpeg" alt="Honda CT 125">
+                    <img src="img/moto2.jpeg" alt="Honda CT 125">
                     <h4>Honda</h4>
-                    <a href="catalogs/honda.html" target="_blank" rel="noopener">Ver catálogo</a>
+                    <a href="catalogs/honda.html">Ver catálogo</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="Img/FXR200.jpeg" alt="Yamaha FXR200">
+                    <img src="img/moto4.jpeg" alt="Yamaha FXR200">
                     <h4>Yamaha</h4>
-                    <a href="catalogs/yamaha.html" target="_blank" rel="noopener">Ver catálogo</a>
+                    <a href="catalogs/yamaha.html">Ver catálogo</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="Img/holkan.jpeg" alt="Suzuki / Holkan">
+                    <img src="img/moto1.jpeg" alt="Suzuki / Holkan">
                     <h4>Suzuki</h4>
-                    <a href="catalogs/suzuki.html" target="_blank" rel="noopener">Ver catálogo</a>
+                    <a href="catalogs/suzuki.html">Ver catálogo</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="Img/pulsar NS200 ug.jpeg" alt="Bajaj Pulsar NS200">
+                    <img src="img/moto3.jpeg" alt="Bajaj Pulsar NS200">
                     <h4>Bajaj</h4>
-                    <a href="catalogs/bajaj.html" target="_blank" rel="noopener">Ver catálogo</a>
+                    <a href="catalogs/bajaj.html">Ver catálogo</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="Img/125 NFI.jpeg" alt="TVS 125">
+                    <img src="img/moto5.jpeg" alt="TVS 125">
                     <h4>TVS</h4>
-                    <a href="catalogs/tvs.html" target="_blank" rel="noopener">Ver catálogo</a>
+                    <a href="catalogs/tvs.html">Ver catálogo</a>
                 </div>
                 <div class="catalog-card">
-                    <img src="Img/ns 400z.jpeg" alt="Royal Enfield / NS 400z">
+                    <img src="img/moto6.jpeg" alt="Royal Enfield / NS 400z">
                     <h4>Royal Enfield</h4>
-                    <a href="catalogs/royal-enfield.html" target="_blank" rel="noopener">Ver catálogo</a>
+                    <a href="catalogs/royal-enfield.html">Ver catálogo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalles de Moto -->
+    <div id="motoModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" id="motoModalOverlay"></div>
+        <div class="modal-content moto-modal-content">
+            <button class="modal-close" id="closeMotoModal" aria-label="Cerrar">&times;</button>
+            <div class="moto-detail-layout">
+                <img id="motoDetailImg" src="" alt="Moto">
+                <div class="moto-detail-info">
+                    <h2 id="motoDetailName">Nombre Moto</h2>
+                    <div id="motoDetailSpecs" class="specs-list">
+                    </div>
                 </div>
             </div>
         </div>
@@ -175,5 +189,3 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-
-

@@ -94,3 +94,56 @@ if (modalOverlay) modalOverlay.addEventListener('click', closeCatalogModal);
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeCatalogModal();
 });
+
+// ----- Modal de Detalles de Moto (Ficha Técnica) -----
+const motoModal = document.getElementById('motoModal');
+const closeMotoModalBtn = document.getElementById('closeMotoModal');
+const motoModalOverlay = document.getElementById('motoModalOverlay');
+
+function openMotoModal(name, img, specsText) {
+    if(!motoModal) return;
+    document.getElementById('motoDetailName').innerText = name;
+    document.getElementById('motoDetailImg').src = img;
+    
+    // Transformar los specs (|) en HTML
+    let specsHtml = "";
+    const specsArray = specsText.split('|');
+    specsArray.forEach(spec => {
+        let parts = spec.split(':');
+        if(parts.length === 2) {
+            specsHtml += "<p><strong>" + parts[0].trim() + ":</strong> " + parts[1].trim() + "</p>";
+        } else {
+            specsHtml += "<p>" + spec + "</p>";
+        }
+    });
+
+    document.getElementById('motoDetailSpecs').innerHTML = specsHtml;
+    
+    motoModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMotoModal() {
+    if (motoModal) {
+        motoModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+}
+
+// Asignar eventos a los botones de "Detalles"
+document.querySelectorAll('.moto-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const name = this.getAttribute('data-name');
+        const img = this.getAttribute('data-img');
+        const specs = this.getAttribute('data-specs');
+        openMotoModal(name, img, specs);
+    });
+});
+
+if (closeMotoModalBtn) closeMotoModalBtn.addEventListener('click', closeMotoModal);
+if (motoModalOverlay) motoModalOverlay.addEventListener('click', closeMotoModal);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMotoModal();
+});
