@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Sayon Sport</title>
+    <link rel="icon" type="image/x-icon" href="img/casco.ico">
+        <!-- Open Graph / Meta Etiquetas para Facebook y WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Moto Sayon Sport | Las mejores motocicletas">
+    <meta property="og:description" content="Descubre nuestro catálogo de motos. Tenemos las mejores marcas, repuestos y accesorios. En Moto Sayon Sport te damos la mejor atención.">
+    <meta property="og:image" content="https://motosayonsport.github.io/MotoSayonSport/img/moto1.jpeg">
+    <meta property="og:url" content="https://motosayonsport.github.io/MotoSayonSport/">
+    <meta property="og:site_name" content="Moto Sayon Sport">
+    
+    <!-- Meta etiquetas para Twitter/X (Opcional pero recomendable) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Moto Sayon Sport | Las mejores motocicletas">
+    <meta name="twitter:description" content="Descubre nuestro catálogo de motos y accesorios con la mejor atención.">
+    <meta name="twitter:image" content="https://motosayonsport.github.io/MotoSayonSport/img/moto1.jpeg">
+
+    <link rel="stylesheet" href="css/dec.css">
+    <!-- Fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Forzar a salir del navegador interno de Facebook/Instagram
+        (function() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            var isFacebook = (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1);
+            
+            if (isFacebook) {
+                // Intentar forzar la apertura en el navegador externo mandando un intent en Android
+                var url = window.location.href;
+                var a = document.createElement("a");
+                a.href = "intent://" + url.replace(/^https?:\/\//i, "") + "#Intent;scheme=https;package=com.android.chrome;end";
+                document.body.appendChild(a);
+                a.click();
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">MOTO SAYON SPORT</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#modelos">Motos más vendidas</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-socials">
+            <a href="https://www.facebook.com/profile.php?id=100057323955178" class="btn-social" title="Facebook">
+                <img src="img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://wa.me/75819459" class="btn-social" title="WhatsApp">
+                <img src="img/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> &#9776;
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Portada) -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Siente la Libertad</h1>
+            <p class="fade-in delay-1">Descubre la potencia y el diseño de nuestra nueva colección 2026.</p>
+            <a href="#modelos" class="btn fade-in delay-2">Ver Modelos</a>
+        </div>
+    </header>
+
+    <!-- Sección de Modelos -->
+    <section id="modelos" class="section">
+        <div class="container">
+            <h2 class="section-title">Motos más vendidas</h2>
+            <div class="models-grid">
+                <!-- Fila 1 -->
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/moto1.jpeg');"></div>
+                    <h3>Holkan 160 freedom</h3>
+                    <p>Aventura y resistencia en todo terreno.</p>
+                    <button class="btn-secondary moto-btn" data-name="Holkan 160 freedom" data-img="img/moto1.jpeg" data-specs="Motor: 149 cc|Potencia: 12.2 HP|Frenos: Disco delantero|Estilo: Doble Propósito|Transmisión: 5 Velocidades">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/moto2.jpeg');"></div>
+                    <h3>Pulsar CT 125</h3>
+                    <p>La utilitaria y aventurera versátil.</p>
+                    <button class="btn-secondary moto-btn" data-name="Pulsar CT 125" data-img="img/moto2.jpeg" data-specs="Motor: 124.9 cc|Potencia: 9.1 HP|Consumo: Muy económico|Estilo: Utilitaria / Moped|Transmisión: Semiautomática">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/moto3.jpeg');"></div>
+                    <h3>Bajaj Pulsar NS200</h3>
+                    <p>Potencia naked para caminos asfálticos.</p>
+                    <button class="btn-secondary moto-btn" data-name="Bajaj Pulsar NS200" data-img="img/moto3.jpeg" data-specs="Motor: 199.5 cc Triple Bujía|Potencia: 24.5 HP|Frenos: Disco en ambas ruedas|Estilo: Naked Deportiva|Refrigeración: Líquida">Detalles</button>
+                </div>
+                
+                <!-- Fila 2 (Nuevas) -->
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/moto7.jpeg');"></div>
+                    <h3>Pulsar 160 Fit</h3>
+                    <p>Potencia para el turismo deportivo.</p>
+                    <button class="btn-secondary moto-btn" data-name="Pulsar 160 Fit" data-img="img/moto7.jpeg" data-specs="Motor: 373.3 cc DOHC|Potencia: 40 HP|Frenos: ABS doble canal|Estilo: Sports Tourer|Tecnología: Faros Full LED">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/moto8.jpeg');"></div>
+                    <h3>Avatar 200 freedom</h3>
+                    <p>Resistencia y trabajo duro.</p>
+                    <button class="btn-secondary moto-btn" data-name="Avatar 200 freedom" data-img="img/moto8.jpeg" data-specs="Motor: 144.8 cc|Potencia: 12.0 HP|Torque: 12.3 Nm|Estilo: Trabajo y Carga|Suspensión: Doble resorte (SNS)">Detalles</button>
+                </div>
+                <div class="model-card scroll-reveal">
+                    <div class="model-image" style="background-image: url('img/moto9.jpeg');"></div>
+                    <h3>Pulsar NS 250</h3>
+                    <p>Clásica y confiable para todo uso.</p>
+                    <button class="btn-secondary moto-btn" data-name="Pulsar NS 250" data-img="img/moto9.jpeg" data-specs="Motor: 124 cc 4 tiempos|Potencia: 12.5 HP|Estilo: Custom / Clásica|Llantas: Aleación|Arranque: Eléctrico">Detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo -->
+    <section id="catalogo" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title text-light">Catálogo</h2>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <p class="text-light">Descarga o visualiza nuestro catálogo completo con especificaciones y precios.</p>
+                <p class="text-light" style="font-size: 1.2rem; font-weight: bold; margin-top: 10px;"><i class="fab fa-whatsapp"></i> 7581-9459</p>
+            </div>
+            <div class="catalog-grid">
+                <div class="catalog-item scroll-reveal">
+                    <h3>Catálogo de Motos Toda marca</h3>
+                    <p>todos los modelos y especificaciones.</p>
+                    <button class="btn-secondary catalog-open">Ver Catálogo</button>
+                </div>
+                <div class="catalog-item scroll-reveal">
+                    <h3>Electrodomésticos</h3>
+                    <p>Ver Electronicos</p>
+                    <a href="https://agenciasway.com.sv/?gad_source=1&gad_campaignid=21397100340&gclid=CjwKCAiAqprNBhB6EiwAMe3yhiVzSoCUCYEMwv_xpp7WtaLfoZ3oXI0glL94HOwS6FbpVZP7RkNOjRoCBMcQAvD_BwE" class="btn-secondary" style="text-decoration: none; display: inline-block;">Ver Electrodomésticos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Catálogos -->
+    <div id="catalogModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeCatalog" aria-label="Cerrar">&times;</button>
+            <h2>Catálogos de Motos</h2>
+            <p>Selecciona una marca para ver su catálogo en línea</p>
+            <div class="modal-catalog-grid">
+                <div class="catalog-card">
+                    <img src="img/honda.png" alt="Honda CT 125">
+                    <h4>Honda</h4>
+                    <a href="des/catálogo motos honda enero 2026.pdf">Ver</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="img/yamaha.png" alt="Yamaha FXR200">
+                    <h4>Yamaha</h4>
+                    <a href="des/listado marcas motos global.pdf">Ver</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="img/keeway y benelli.png" alt="Keeway y Benelli">
+                    <h4>Keeway y Benelli</h4>
+                    <a href="des/listado marcas motos mi moto.pdf">Ver</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="img/bajaj.png" alt="Bajaj Pulsar NS200">
+                    <h4>Bajaj</h4>
+                    <a href="des/catalogo uma_enero 2026..pdf">Ver</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="img/tvs.png" alt="TVS 125">
+                    <h4>TVS</h4>
+                    <a href="des/catalogo de tvs.pdf">Ver</a>
+                </div>
+                <div class="catalog-card">
+                    <img src="img/Captura.PNG" alt="Katana y Dayun">
+                    <h4>Katana y Dayun</h4>
+                    <a href="des/catálogo de motos dayun y katana.pdf">Ver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalles de Moto -->
+    <div id="motoModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" id="motoModalOverlay"></div>
+        <div class="modal-content moto-modal-content">
+            <button class="modal-close" id="closeMotoModal" aria-label="Cerrar">&times;</button>
+            <div class="moto-detail-layout">
+                <img id="motoDetailImg" src="" alt="Moto">
+                <div class="moto-detail-info">
+                    <h2 id="motoDetailName">Nombre Moto</h2>
+                    <div id="motoDetailSpecs" class="specs-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Moto Sayon Sport. Todos los derechos reservados.</p>
+        <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=100057323955178&locale=es_LA"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://wa.me/75819459"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
